@@ -22,6 +22,15 @@ row.innerHTML = `
 list.appendChild(row);
 }
 
+// Clear fields
+UI.prototype.clearFields = function(){
+   document.querySelector('#title').value = '';
+   document.querySelector('#author').value = '';
+   document.querySelector('#isbn').value = '';
+   
+// Instantiating a new book
+}
+
 // Event listeners
 document.querySelector('.book-form').addEventListener('submit', function(e){
 const  title = document.querySelector('#title').value,
@@ -35,6 +44,9 @@ const ui = new UI();
 
 // adding a book to the list
 ui.addBookToList(book)
+
+// Clearing fields
+
  
 
     e.preventDefault()
