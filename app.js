@@ -27,8 +27,6 @@ UI.prototype.clearFields = function(){
    document.querySelector('#title').value = '';
    document.querySelector('#author').value = '';
    document.querySelector('#isbn').value = '';
-   
-// Instantiating a new book
 }
 
 // Event listeners
@@ -36,6 +34,7 @@ document.querySelector('.book-form').addEventListener('submit', function(e){
 const  title = document.querySelector('#title').value,
         author = document.querySelector('#author').value,
         isbn = document.querySelector('#isbn').value;
+
 // Instantiating a new book
 const book = new Book(title, author, isbn);
 
@@ -46,7 +45,7 @@ const ui = new UI();
 ui.addBookToList(book)
 
 // Clearing fields
-
+ui.clearFields();
  
 
     e.preventDefault()
