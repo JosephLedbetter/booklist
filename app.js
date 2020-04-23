@@ -33,7 +33,7 @@ UI.prototype.showAlert = function(message, className){
     // insert into dom --> get parent
     const container = document.querySelector('.container');
     // get form
-    const form = document.querySelector('#book-form');
+    const form = document.querySelector('.book-form');
     // insert alert before the form inputs
     container.insertBefore(div, form);
     // timeout 3 seconds 
