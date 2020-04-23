@@ -66,8 +66,12 @@ if(title === '' || author === '' || isbn === ''){
     // show error window above form
     ui.showAlert(`Please fill in all fields`, 'error')
 } else {
+console.log('success');
 // adding a book to the list
-ui.addBookToList(book)
+ui.addBookToList(book);
+
+// show successful addition of a book to the list
+ui.showAlert('Book added!', 'success');
 
 // Clearing fields
 ui.clearFields();
